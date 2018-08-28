@@ -6,8 +6,8 @@ namespace FitnessFrog
     {
         static void Main(string[] args)
         {
-            var runningTotal = 0;
-            var minutes = 0;
+            var runningTotal = 0.0;
+            var minutes = 0.0;
 
             while(true)
             {
@@ -21,7 +21,7 @@ namespace FitnessFrog
                 //Add minutes exercised to total
                 try
                 {
-                    minutes = int.Parse(input);
+                    minutes = double.Parse(input);
                 }
                 catch (FormatException)
                 {
