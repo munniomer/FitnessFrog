@@ -19,6 +19,16 @@ namespace FitnessFrog
 
                 //Add minutes exercised to total
                 var minutes = int.Parse(input);
+
+                if (minutes <= 10)
+                    Console.WriteLine("Better than nothing, am I right?");
+                else if (minutes <= 30)
+                    Console.WriteLine("Way to go hot stuff!");
+                else if (minutes <= 60)
+                    Console.WriteLine("You must be a ninja warrior in training");
+                else
+                    Console.WriteLine("Okay, now you are just showing off!");
+                    
                 runningTotal += minutes;
 
                 //Display total minutes exercised to the screen
