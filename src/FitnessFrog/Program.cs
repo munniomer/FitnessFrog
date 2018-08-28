@@ -20,7 +20,13 @@ namespace FitnessFrog
                 //Add minutes exercised to total
                 var minutes = int.Parse(input);
 
-                if (minutes <= 10)
+                if (minutes <= 0)
+                {
+                    Console.WriteLine(minutes + " is not an acceptable value.");
+                    continue;
+                }
+
+                else if (minutes <= 10)
                     Console.WriteLine("Better than nothing, am I right?");
                 else if (minutes <= 30)
                     Console.WriteLine("Way to go hot stuff!");
