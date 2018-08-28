@@ -7,6 +7,7 @@ namespace FitnessFrog
         static void Main(string[] args)
         {
             var runningTotal = 0;
+            var minutes = 0;
 
             while(true)
             {
@@ -18,8 +19,17 @@ namespace FitnessFrog
                     break;
 
                 //Add minutes exercised to total
-                var minutes = int.Parse(input);
-
+                try
+                {
+                    minutes = int.Parse(input);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("That is not a valid input");
+                    continue;
+                    
+                }
+               
                 if (minutes <= 0)
                 {
                     Console.WriteLine(minutes + " is not an acceptable value.");
